@@ -11,6 +11,9 @@
     --shadow:0 6px 24px rgba(0,0,0,.06);
   }
   html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;}
+  /* ✨ Animation d'apparition globale */
+  body{opacity:0; animation:fadeIn .6s ease forwards}
+  @keyframes fadeIn{from{opacity:0} to{opacity:1}}
   .wrap{max-width:960px;margin:auto;padding:20px;}
   header{position:sticky;top:0;background:linear-gradient(180deg,var(--paper),#fff0),padding-box;backdrop-filter:saturate(150%) blur(6px);z-index:5;border-bottom:1px solid #eee}
   header .bar{display:flex;gap:12px;align-items:center;justify-content:space-between;max-width:960px;margin:auto;padding:10px 16px}
@@ -19,7 +22,8 @@
   .brand .logo:after{content:"✈️";position:absolute;inset:0;display:grid;place-items:center;font-size:22px}
   .brand h1{font-size:18px;margin:0}
   .tabs{display:flex;gap:8px;flex-wrap:wrap}
-  .tab{border:1px dashed #d0cbbf;background:var(--card);padding:8px 12px;border-radius:12px;cursor:pointer;box-shadow:var(--shadow)}
+  .tab{border:1px dashed #d0cbbf;background:var(--card);padding:8px 12px;border-radius:12px;cursor:pointer;box-shadow:var(--shadow);transition:transform .12s ease}
+  .tab:active{transform:scale(.98)}
   .tab.active{border-style:solid;border-color:#cbb894;background:#fff}
   main{padding:10px 16px}
   section{display:none;animation:fade .3s ease}
@@ -32,8 +36,10 @@
   h2{font-size:20px;margin:16px 0 8px}
   h3{font-size:16px;margin:12px 0 8px}
   .muted{color:var(--muted)}
-  a{color:var(--accent);text-decoration:none}
-  .mini-map{background:#fff;border:1px solid #eee;border-radius:16px;padding:10px;box-shadow:var(--shadow)}
+  a{color:#174a96;text-decoration:none}
+  .mini-map{background:#fff;border:1px solid #eee;border-radius:16px;padding:10px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+  /* 🎨 Fond illustré discret derrière la mini-carte */
+  .mini-map::before{content:""; position:absolute; inset:-40% -20% auto -20%; height:180px; background:radial-gradient(120px 80px at 10% 60%, #e9f2ff 0, #fff 70%, transparent 71%), radial-gradient(100px 60px at 90% 40%, #fff7e2 0, #fff 70%, transparent 71%); opacity:.6; pointer-events:none}
   .legend{display:flex;flex-wrap:wrap;gap:10px;font-size:12px;margin-top:8px}
   .legend span{display:inline-flex;align-items:center;gap:6px}
   .dot{width:10px;height:10px;border-radius:50%}
@@ -81,11 +87,11 @@
       <div>
         <h2>Mini‑carte dessinée</h2>
         <div class="mini-map">
-          <!-- Mini‑carte SVG stylisée et légère (avec Čertovka pour montrer Kampa comme vraie île urbaine) -->
+          <!-- Mini‑carte SVG stylisée (avec Čertovka pour montrer Kampa comme vraie île urbaine) -->
           <svg viewBox="0 0 300 200" width="100%" height="160" aria-label="Mini‑carte stylisée du centre de Prague">
             <!-- Vltava (fleuve principal) -->
             <path d="M10,40 C80,50 120,30 200,40 C250,45 280,60 290,70 L290,120 C230,110 170,130 110,120 C60,112 30,100 10,90 Z" fill="#d9ecff"/>
-            <!-- Čertovka (canal) : trait d'eau étroit séparant Kampa de Malá Strana -->
+            <!-- Čertovka (canal) -->
             <path d="M95,76 C110,74 130,76 155,80 C175,83 195,86 212,86" fill="none" stroke="#bfe2ff" stroke-width="6" stroke-linecap="round" opacity="0.95"/>
             <path d="M95,79 C110,77 130,79 155,83 C175,86 195,89 212,89" fill="none" stroke="#97cfff" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
             <!-- Pont Charles -->
@@ -298,7 +304,6 @@
   <section id="map" role="tabpanel" aria-labelledby="Carte">
     <h2>Carte interactive — Prague (My Maps)</h2>
     <div class="card">
-      <p class="muted">Colle ici ton lien d’embed My Maps quand tu l’auras : menu ⋮ → <em>Embed on my site</em>.</p>
       <div style="position:relative;padding-bottom:62%;height:0;overflow:hidden;border-radius:16px;border:1px solid #ece6da;box-shadow:0 6px 24px rgba(0,0,0,.06);">
         <iframe
           title="Prague 2025 — Carnet"
