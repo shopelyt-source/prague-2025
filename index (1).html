@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Carnet de voyage à Prague — 21–24 oct. 2025</title>
+<meta name="description" content="Mini‑guide web mobile bilingue (FR/EN) — programme, lieux, conseils, transferts aéroport. Partageable par simple lien.">
+<style>
+  :root{
+    --bg:#faf6ef; --ink:#222; --muted:#6b6b6b; --accent:#2b5da7; --paper:#fffdfa; --card:#fffcf6;
+    --shadow:0 6px 24px rgba(0,0,0,.06);
+  }
+  html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;}
+  .wrap{max-width:960px;margin:auto;padding:20px;}
+  header{position:sticky;top:0;background:linear-gradient(180deg,var(--paper),#fff0),padding-box;backdrop-filter:saturate(150%) blur(6px);z-index:5;border-bottom:1px solid #eee}
+  header .bar{display:flex;gap:12px;align-items:center;justify-content:space-between;max-width:960px;margin:auto;padding:10px 16px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand .logo{width:44px;height:44px;border-radius:12px;background:conic-gradient(from 200deg at 50% 50%,#e9f2ff,#fff7df,#f7e0ff,#e9f2ff);box-shadow:var(--shadow);position:relative}
+  .brand .logo:after{content:"✈️";position:absolute;inset:0;display:grid;place-items:center;font-size:22px}
+  .brand h1{font-size:18px;margin:0}
+  .tabs{display:flex;gap:8px;flex-wrap:wrap}
+  .tab{border:1px dashed #d0cbbf;background:var(--card);padding:8px 12px;border-radius:12px;cursor:pointer;box-shadow:var(--shadow)}
+  .tab.active{border-style:solid;border-color:#cbb894;background:#fff}
+  main{padding:10px 16px}
+  section{display:none;animation:fade .3s ease}
+  section.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+  .card{background:#fff;border:1px solid #ece6da;border-radius:16px;padding:14px 16px;box-shadow:var(--shadow);margin:14px 0}
+  .pill{display:inline-block;padding:4px 8px;border-radius:999px;background:#eef5ff;color:#1a4b93;font-size:12px}
+  .grid{display:grid;gap:12px}
+  @media(min-width:760px){.grid.cols-2{grid-template-columns:1fr 1fr} .grid.cols-3{grid-template-columns:1fr 1fr 1fr}}
+  h2{font-size:20px;margin:16px 0 8px}
+  h3{font-size:16px;margin:12px 0 8px}
+  .muted{color:var(--muted)}
+  a{color:var(--accent);text-decoration:none}
+  .mini-map{background:#fff;border:1px solid #eee;border-radius:16px;padding:10px;box-shadow:var(--shadow)}
+  .legend{display:flex;flex-wrap:wrap;gap:10px;font-size:12px;margin-top:8px}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .dot{width:10px;height:10px;border-radius:50%}
+  .dot.h{background:#f05d5e}
+  .dot.c{background:#1877f2}
+  .dot.k{background:#22a06b}
+  .dot.p{background:#c27ba0}
+  .dot.o{background:#f0b429}
+  ul{padding-left:18px}
+  .tag{display:inline-block;border:1px solid #e5e0d5;border-radius:10px;padding:2px 8px;font-size:12px;margin-right:6px}
+  .badge{font-size:12px;background:#f3f7ff;border:1px solid #dbe8ff;padding:2px 8px;border-radius:999px}
+  .cta{display:inline-block;margin:6px 0;padding:10px 14px;background:#1a4b93;color:#fff;border-radius:12px}
+  .split{display:flex;flex-direction:column;gap:12px}
+  @media(min-width:960px){.split{flex-direction:row} .split > * {flex:1}}
+  .en {opacity:.85}
+  footer{margin:24px 0 40px;color:#777;text-align:center}
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <div class="brand">
+      <div class="logo" aria-hidden="true"></div>
+      <h1>Carnet de voyage à Prague <span class="muted">· 21–24 oct. 2025</span></h1>
+    </div>
+    <nav class="tabs" role="tablist" aria-label="Navigation du carnet">
+      <button class="tab active" data-tab="programme">📅 Programme</button>
+      <button class="tab" data-tab="lieux">🗺️ Lieux</button>
+      <button class="tab" data-tab="conseils">💡 Conseils</button>
+      <button class="tab" data-tab="notes">✍️ Notes</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="card">
+    <div class="split">
+      <div>
+        <h2>Infos principales</h2>
+        <p><strong>Hébergement</strong> · Vladislavova 1477/20, 110 00 Praha 1 (Prague 1). Petit‑déjeuner tous les matins à l’hôtel.</p>
+        <p><span class="tag">Arrivée mardi 21/10 à 12:45</span><span class="tag">Départ ven. 24/10 à 14:30</span></p>
+        <p><span class="badge">FR + EN on places</span></p>
+      </div>
+      <div>
+        <h2>Mini‑carte dessinée</h2>
+        <div class="mini-map">
+          <!-- Mini‑carte SVG stylisée et légère -->
+          <svg viewBox="0 0 300 200" width="100%" height="160" aria-label="Mini‑carte stylisée du centre de Prague">
+            <!-- Vltava -->
+            <path d="M10,40 C80,50 120,30 200,40 C250,45 280,60 290,70 L290,120 C230,110 170,130 110,120 C60,112 30,100 10,90 Z" fill="#d9ecff"/>
+            <!-- Pont Charles -->
+            <rect x="120" y="78" width="60" height="8" fill="#444" rx="2"/>
+            <!-- Kampa (île) -->
+            <ellipse cx="140" cy="95" rx="22" ry="12" fill="#bfe6d1"/>
+            <!-- Vieille Ville -->
+            <circle cx="200" cy="70" r="6" fill="#f0b429"/>
+            <!-- Château -->
+            <circle cx="70" cy="55" r="7" fill="#1877f2"/>
+            <!-- Cathédrale (même zone) -->
+            <circle cx="80" cy="50" r="5" fill="#1877f2"/>
+            <!-- Klementinum -->
+            <circle cx="185" cy="80" r="5" fill="#22a06b"/>
+            <!-- Lennon Wall (approx. Malá Strana) -->
+            <circle cx="125" cy="85" r="5" fill="#c27ba0"/>
+            <!-- Hôtel (hyper‑centre) -->
+            <circle cx="180" cy="90" r="5" fill="#f05d5e"/>
+          </svg>
+          <div class="legend">
+            <span><span class="dot h"></span>Hôtel</span>
+            <span><span class="dot c"></span>Château & Cathédrale</span>
+            <span><span class="dot p"></span>Pont Charles & Lennon</span>
+            <span><span class="dot k"></span>Klementinum</span>
+            <span><span class="dot o"></span>Vieille Ville / Orloj</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROGRAMME -->
+  <section id="programme" class="active" role="tabpanel" aria-labelledby="Programme">
+    <h2>Programme jour par jour</h2>
+
+    <div class="card">
+      <h3>🗓️ Mardi 21 oct. — Arrivée & Vieille Ville</h3>
+      <p class="muted">12:45 · Atterrissage PRG (Václav Havel). Petit‑déjeuner pris à l’hôtel chaque matin.</p>
+      <ul>
+        <li><strong>Transfert aéroport → hôtel (Uber recommandé)</strong> · 25–35 min · ~500–650 CZK (~€20–26). Attendre au point « Rideshare » au Terminal. <span class="en">Uber from PRG to center: 25–35 min, ~500–650 CZK.</span></li>
+        <li><strong>Alternative éco</strong> : Bus <strong>59</strong> → Métro <strong>A</strong> (Nádraží Veleslavín → Můstek) · 40 CZK, 40–50 min. <span class="en">Bus 59 + Metro A to Můstek.</span></li>
+        <li><strong>Installation</strong> à Vladislavova 1477/20.</li>
+        <li><strong>Balade d’introduction</strong> (à pied ~10–12 min) : Hôtel → <a href="#" aria-label="Old Town Square">Staroměstské náměstí / Old Town Square</a> → Horloge astronomique (spectacle chaque heure 08:00–23:00).</li>
+        <li><strong>Dîner (libre)</strong> suggestion proche : Lokál Dlouhááá.</li>
+      </ul>
+      <p><span class="pill">Note</span> Monter à la tour de l’Hôtel de Ville pour le coucher du soleil ✨ (env. 250 CZK).</p>
+    </div>
+
+    <div class="card">
+      <h3>🗓️ Mercredi 22 oct. — Château, Cathédrale, Pont & Kampa</h3>
+      <ul>
+        <li><strong>Petit‑déjeuner à l’hôtel</strong>.</li>
+        <li><strong>Hôtel → Château de Prague / Prague Castle</strong> · Tram <strong>22</strong> depuis « Národní třída » → « Pražský hrad » (ticket 90 min 40 CZK). Trajet ~25 min + 5 min de marche.</li>
+        <li><strong>Visites</strong> : Cathédrale Saint‑Guy / <em>St. Vitus Cathedral</em>, Vieux Palais royal / <em>Old Royal Palace</em>, Ruelle d’Or / <em>Golden Lane</em>. Bâtiments historiques ~09:00–17:00.</li>
+        <li><strong>Déjeuner</strong> à Malá Strana (ex. U Glaubiců).</li>
+        <li><strong>Descente à pied</strong> vers <strong>Pont Charles / Charles Bridge</strong> puis <strong>Île de Kampa / Kampa Island</strong>.</li>
+        <li><strong>Pause café</strong> : Café Savoy.</li>
+        <li><strong>Dîner</strong> libre.</li>
+      </ul>
+      <p><span class="pill">Tip</span> Photos superbes au pont au coucher du soleil 🌉</p>
+    </div>
+
+    <div class="card">
+      <h3>🗓️ Jeudi 23 oct. — Klementinum + Lennon Wall + dîner 420</h3>
+      <ul>
+        <li><strong>Petit‑déjeuner à l’hôtel</strong>.</li>
+        <li><strong>Hôtel → Klementinum Library</strong> (à pied ~10 min) · Mariánské náměstí 5. Visite guidée ~50 min (Baroque Library + Mirror Chapel + Astronomical Tower).</li>
+        <li><strong>Déjeuner</strong> proche (ex. Mistral Café ou Mlejnice).</li>
+        <li><strong>Après‑midi</strong> : Pont Charles → <strong>Lennon Wall</strong> (Velkopřevorské nám.) → flânerie à Malá Strana / Kampa.</li>
+        <li><strong>Dîner réservé : 420 Restaurant</strong> · <em>Staroměstské náměstí 480/24, Praha 1</em> (11:30–22:30). Face à l’Horloge. <span class="en">Dinner at 420 Restaurant on Old Town Square.</span></li>
+      </ul>
+      <p><span class="pill">Note</span> Regarder la ville depuis la Tour astronomique du Klementinum si la météo est claire 🌤️</p>
+    </div>
+
+    <div class="card">
+      <h3>🗓️ Vendredi 24 oct. — Matin libre & départ (vol 14:30)</h3>
+      <ul>
+        <li><strong>Petit‑déjeuner à l’hôtel</strong> puis check‑out.</li>
+        <li><strong>Balade</strong> douce vers Františkánská zahrada ou souvenirs près de Na Příkopě.</li>
+        <li><strong>Transfert hôtel → aéroport (Uber choisi)</strong> · Départ conseillé ~11:15–11:30 pour marge confortable (25–35 min + sécurité). Coût ~500–650 CZK.</li>
+        <li><strong>Alternative transport public</strong> (si besoin) : Métro <strong>B</strong> (Můstek → Zličín) + Bus <strong>100</strong> → PRG · 40 CZK · 50–55 min.</li>
+      </ul>
+      <p class="muted">Astuce : active le mode hors‑ligne de Mapy.cz la veille.</p>
+    </div>
+  </section>
+
+  <!-- LIEUX -->
+  <section id="lieux" role="tabpanel" aria-labelledby="Lieux">
+    <h2>Lieux clés (FR / EN)</h2>
+    <div class="grid cols-2">
+      <div class="card">
+        <h3>Château de Prague · <em>Prague Castle</em></h3>
+        <p>Hradčany, Praha 1 · Complexe 06:00–22:00 · Bâtiments ~09:00–17:00. Circuits payants.</p>
+        <p>Accès: Tram 22 « Pražský hrad » · Marches panoramiques pour redescendre.</p>
+      </div>
+      <div class="card">
+        <h3>Cathédrale Saint‑Guy · <em>St. Vitus Cathedral</em></h3>
+        <p>Dans l’enceinte du château · Vitraux d’Alfons Mucha · Entrée via billet de circuit.</p>
+      </div>
+      <div class="card">
+        <h3>Pont Charles · <em>Charles Bridge</em></h3>
+        <p>Gratuit · 24/7 · Moins de foule tôt le matin et au coucher du soleil.</p>
+      </div>
+      <div class="card">
+        <h3>Place de la Vieille Ville · <em>Old Town Square</em></h3>
+        <p>Horloge astronomique (08:00–23:00, figures chaque heure). Vue depuis la tour (payant).</p>
+      </div>
+      <div class="card">
+        <h3>Bibliothèque du Klementinum · <em>Klementinum Library</em></h3>
+        <p>Mariánské nám. 5 · Visite guidée ~50 min (Baroque Library, Mirror Chapel, Tower). Photos souvent interdites dans la bibliothèque.</p>
+      </div>
+      <div class="card">
+        <h3>Île de Kampa · <em>Kampa Island</em></h3>
+        <p>Parc paisible au pied du pont · Musée Kampa (art moderne) · Cafés au bord de l’eau.</p>
+      </div>
+      <div class="card">
+        <h3>Mur John Lennon · <em>John Lennon Wall</em></h3>
+        <p>Velkopřevorské náměstí · Street‑art évolutif · Bon spot photo.</p>
+      </div>
+      <div class="card">
+        <h3>Restaurant 420 · <em>420 Restaurant</em></h3>
+        <p>Staroměstské nám. 480/24, Praha 1 · 11:30–22:30 · Face à l’Orloj. Réservation conseillée.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONSEILS -->
+  <section id="conseils" role="tabpanel" aria-labelledby="Conseils">
+    <h2>Infos pratiques</h2>
+    <div class="card">
+      <h3>Transferts aéroport (arrivée 12:45, départ 14:30)</h3>
+      <ul>
+        <li><strong>Uber / Taxi</strong> : 25–35 min selon trafic. ~500–650 CZK. Départ hôtel → PRG conseillé 11:15–11:30 le vendredi.</li>
+        <li><strong>Bus + Métro (éco)</strong> : Bus <strong>59</strong> ↔ Métro <strong>A</strong> (Nádraží Veleslavín) ou Métro <strong>B</strong> + Bus <strong>100</strong> (Zličín). Ticket 90 min <strong>40 CZK</strong>.</li>
+        <li><strong>Arrêts utiles depuis l’hôtel</strong> : « Národní třída » (métro B / tram 9, 22). À pied ~4–5 min.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Budget & monnaie</h3>
+      <ul>
+        <li>1 € ≈ 25–26 CZK. Cartes largement acceptées.</li>
+        <li>Tickets transports : 30 min 30 CZK · 90 min 40 CZK · 24 h 120 CZK.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Apps & astuces</h3>
+      <ul>
+        <li>Mapy.cz (cartes hors‑ligne), Uber, Google Translate.</li>
+        <li>Octobre : 8–15 °C · Prévoir veste et parapluie.</li>
+        <li>Pourboire usuel : 5–10% si non inclus.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- NOTES -->
+  <section id="notes" role="tabpanel" aria-labelledby="Notes">
+    <h2>Tes notes personnelles</h2>
+    <div class="card">
+      <ul>
+        <li>Lever les yeux au Klementinum (fresques + globes) ✨</li>
+        <li>Selfie au Pont Charles au lever du jour 📸</li>
+        <li>Goûter un trdelník cannelle près de la Vieille Ville</li>
+        <li>Écouter un musicien au bord de la Vltava 🎻</li>
+        <li>Vue de nuit depuis le pont Manesův</li>
+      </ul>
+      <p class="muted">Astuce : tu peux éditer cette section après publication en remplaçant ce fichier HTML.</p>
+    </div>
+    <a class="cta" href="#" onclick="navigator.share ? navigator.share({title:'Carnet de voyage à Prague', text:'Mon mini‑guide Prague (21–24 oct. 2025)', url: location.href}) : alert('Partage natif indisponible : copie/colle simplement l’URL.'); return false;">🔗 Partager ce guide</a>
+  </section>
+</main>
+
+<footer>
+  <small>© Carnet de voyage à Prague — 2025 · Made with ❤️ for an easy city break.</small>
+</footer>
+
+<script>
+  document.querySelectorAll('.tab').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+      document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+      window.scrollTo({top:0,behavior:'smooth'});
+    })
+  });
+</script>
+</body>
+</html>
